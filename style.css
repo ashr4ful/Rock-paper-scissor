@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Exo 2" monospace;
+  word-wrap: break-word;
+}
+
+body{
+  background: #0F172A;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 30vh;
+}
+
+.container .content {
+  position: relative;
+  padding: 0 1.27rem;
+  width: auto;
+  min-width: 80%;
+}
+
+.scoreboard {
+  font-weight: bold;
+  color: #fff;
+  display:flex;
+  justify-content: space-between;
+}
+
+.scoreboard div {
+  gap: 1.5 rem;
+  padding: 1rem;
+}
+
+.playground {
+  min-height:300px;
+  display: flex;
+  margin-top: 3.5rem;
+}
+
+.playground div {
+  flex: 1;
+  color: #eee;
+}
+
+.playground div div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8rem;
+  margin-top: 5rem;
+  animation: bounce 1s ease;
+}
+
+@-webkit-keyframes bounce {
+  0%, 100% { transform: scale(1) rotate(0); }
+  50% { transform: scale(1.2) rotate(45deg); }
+}
+
+.playground #computer div {
+  animation: rotate 1s ease;
+}
+
+@-webkit-keyframes rotate {
+  0%, 100% { transform: rotate(0);}
+  50% { transform: rotate(-50deg); }
+}
+
+.txt {
+  opacity: 0;
+  animation: slideUp .7s ease-out forwards;
+  font-size: 1.8rem;
+  color: #fefefe;
+  margin: 2rem 0;
+  font-weight: bold;
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    opacity: 1;
+  }
+}
+.control {
+  display :flex;
+  justify-content: center;
+  margin :auto;
+  margin-top: .5rem;
+}
+
+.control button {
+  width: 5rem;
+  height: 5rem;
+  font-size: 2.5rem;
+  outline: none;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  margin: 0 5px;
+  background-color: transparent;
+  background: rgba(255,255,255,0.08);
+  
+}
+
+.reset {
+  display: flex;
+  width: 100%;
+  padding: 1.5rem 0;
+  justify-content: center;
+}
+
+
+.reset button{
+  padding: 1rem;
+  border-radius: 30px;
+  border: none;
+  margin-top: 15px;
+  background: #00DEFF;
+  font-weight:bold;
+  color: #eee;
+}
+
+
